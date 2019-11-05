@@ -5,7 +5,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+    signed_in = False
+    return render_template('index.html', signed_in = signed_in)
 
 # @app.route("/another")
 # def show():

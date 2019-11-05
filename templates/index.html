@@ -8,7 +8,15 @@
     <title>This is HTML Again !</title>
   </head>
   <body>
+    {% if signed_in %}
     <h1>Hello {{ name }} !</h1>
+    <h2>You are currently signed in !</h2>
     <img src="../static/image/Hello.jpeg" alt="" id="background-pic" />
+    <button>Sign Out !</button>
+    {% else %}
+    <h1>Hello Stranger !</h1>
+    <button>Sign In</button>
+    <button>Sign Up</button>
+    {% endif %}
   </body>
 </html>
