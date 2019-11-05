@@ -5,5 +5,12 @@ app = Flask(__name__)
 def index():
     return "Why so easy"
 
+@app.route("/another")
+def show():
+    return "Yo"
+
+
+
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
