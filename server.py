@@ -11,9 +11,10 @@ def index():
 # def show():
 #     return "Yo"
 
-@app.route('/user/<username>')
-def show(username):
-    return f"Hi {username[2]}"
+@app.route('/user/<name>')
+def show(name):
+    name = name.upper()
+    return render_template('index.html', name=name)
 
 
 if __name__ == "__main__":
